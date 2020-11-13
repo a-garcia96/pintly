@@ -15,7 +15,7 @@ class Breweries extends Component {
     componentDidMount() {
         axios.get('/breweries/', {
             params: {
-                key: '276004031382a9b322a752feaa83a820'
+                key: process.env.REACT_APP_BREWERIES
             }
         })
             .then(response => {
