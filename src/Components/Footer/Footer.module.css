@@ -1,0 +1,18 @@
+footer{
+    height: 300px;
+    width: auto;
+    background-color: #FCD581;
+    box-sizing: border-box;
+    padding: 4vh 0;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.socialFooter {
+    display: flex;
+    justify-content: space-evenly;
+}
