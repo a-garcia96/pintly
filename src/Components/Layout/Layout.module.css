@@ -2,4 +2,5 @@ main {
     min-height: 75vh;
     /* padding: 4vh 0; */
     box-sizing: border-box;
+    background-color: #fffdf9;
 }
