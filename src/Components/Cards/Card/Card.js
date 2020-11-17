@@ -13,7 +13,7 @@ const card = (props) => (
             <Card.Subtitle className="mb-2 text-muted">{props.subtitle}</Card.Subtitle>
             <Card.Text><strong>{props.info}</strong></Card.Text>
         </Card.Body>
-        <Button variant="secondary">Learn More</Button>
+        <Button onClick={props.modalHandler} variant="secondary">Learn More</Button>
     </Card>
 );
 

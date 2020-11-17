@@ -46,7 +46,7 @@ class contentPagination extends Component {
                 <Pagination>
                     {pageItems}
                 </Pagination>
-                    <Cards page={this.props.page} splitData={this.state.splitData}/>
+                    <Cards modalHandler={this.props.modalHandler} page={this.props.page} splitData={this.state.splitData}/>
                 <Pagination>
                     {pageItems}
                 </Pagination>

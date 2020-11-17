@@ -14,6 +14,7 @@ const cards = (props) => {
                     title={obj.name}
                     subtitle={obj.style === undefined ? 'N/A' : obj.style.category.name}
                     info={obj.abv}
+                    modalHandler={props.modalHandler}
                 />
             );
         } else{
@@ -24,6 +25,7 @@ const cards = (props) => {
                     title={obj.name}
                     subtitle={obj.established}
                     info={obj.website}
+                    modalHandler={props.modalHandler}
                 />
             );
         }
