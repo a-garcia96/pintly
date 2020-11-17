@@ -3,13 +3,27 @@ import React, { Component } from 'react';
 import Layout from '../../Components/Layout/Layout';
 import Loader from '../../Components/Loader/Loader';
 import Pagination from '../../Components/contentPagination/contentPagination';
+import VerticalModal from '../../Components/Modal/Modal';
+
+
 import axios from '../../Utilities/Axios';
+
+
 import Container from 'react-bootstrap/esm/Container';
 
 class Breweries extends Component {
 
     state = {
-        loading: true
+        loading: true,
+        showModal: false,
+    }
+
+    showModalHandler() {
+        this.setState({showModal: true});
+    }
+
+    hideModalHandler () {
+        this.setState({showModal: false});
     }
 
     componentDidMount() {
@@ -30,7 +44,8 @@ class Breweries extends Component {
         return (
             <Layout>
                 <Container>
-                    {this.state.loading ? <Loader /> : <Pagination page={this.state.page} data={this.state.breweries} />}
+                    {this.state.loading ? <Loader /> : <Pagination modalHandler={this.showModalHandler.bind(this)} page={this.state.page} data={this.state.breweries} />}
+                    <VerticalModal show={this.state.showModal} onHide={this.hideModalHandler.bind(this)}/>
                 </Container>
             </Layout>
         );
