@@ -12,14 +12,12 @@ const verticalModal = (props) => (
     >
         <Modal.Header closeButton>
             <Modal.Title id="contained-modal-title-vcenter">
-                TITLE
+                {props.data[0].name}
             </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <h4>Subtitle</h4>
-            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.</p>
+            <h4>{props.data[0].style ? props.data[0].style.shortName : ''}</h4>
+            <p>{props.data[0].description ? props.data[0].description : 'No Info Found'}</p>
         </Modal.Body>
         <Modal.Footer>
             <Button onClick={props.onHide}>Close</Button>

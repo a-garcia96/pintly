@@ -11,7 +11,7 @@ const card = (props) => (
         <Card.Body>
             <Card.Title>{props.title}</Card.Title>
             <Card.Subtitle className="mb-2 text-muted">{props.subtitle}</Card.Subtitle>
-            <Card.Text><strong>{props.info}</strong></Card.Text>
+            <Card.Text><strong>{props.info}%</strong></Card.Text>
         </Card.Body>
         <Button onClick={props.modalHandler} variant="secondary">Learn More</Button>
     </Card>

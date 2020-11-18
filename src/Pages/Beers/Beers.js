@@ -17,7 +17,8 @@ class Beers extends Component {
         beers: null,
         loading: true,
         items: [],
-        showModal: false
+        showModal: false,
+        singleBeerData: null
     };
 
     showModalHandler(e) {
@@ -36,13 +37,13 @@ class Beers extends Component {
 
     hideModalHandler () {
         // MAKE COPY OF STATE FOR IMMUTABLE OPERATIONS
-
+        const stateCopy = {...this.state};
         //SET SHOW MODAL TO FALSE
-
+        stateCopy.showModal = false;
         // REMOVE THE SINGLE BEER DATA PROPERTY FROM STATE
-
+        stateCopy.singleBeerData = null;
         // SET STATE WITH MODIFIED STATE COPY
-        this.setState({showModal: false});
+        this.setState(stateCopy);
     }
 
     componentDidMount = () => {
@@ -66,7 +67,9 @@ class Beers extends Component {
             <Layout>
                 <Container>
                     {this.state.loading ? <Loader /> : <Pagination modalHandler={this.showModalHandler.bind(this)} page={this.state.page} data={this.state.beers} />}
-                    <VerticalModal show={this.state.showModal} onHide={this.hideModalHandler.bind(this)}/>
+                    
+                    {this.state.singleBeerData === null ? null : <VerticalModal data={this.state.singleBeerData} show={this.state.showModal} onHide={this.hideModalHandler.bind(this)}/>}
+                    
                 </Container>
             </Layout>
         )

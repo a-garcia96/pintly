@@ -12,7 +12,7 @@ const cards = (props) => {
                 <Card key={obj.id}
                     img={obj.labels === undefined ? `https://i.pinimg.com/originals/c5/f0/fa/c5f0fa5ac14327b8330fde1c621ffa8a.jpg` : obj.labels.contentAwareMedium}
                     title={obj.name}
-                    subtitle={obj.style === undefined ? 'N/A' : obj.style.category.name}
+                    subtitle={obj.style === undefined ? 'N/A' : obj.style.shortName}
                     info={obj.abv}
                     modalHandler={props.modalHandler}
                     searchKey={obj.id}
