@@ -10,7 +10,6 @@ import axios from '../../Utilities/Axios';
 
 
 import Container from 'react-bootstrap/esm/Container';
-import { isCompositeComponent } from 'react-dom/test-utils';
 
 class Beers extends Component {
     state = {
@@ -21,11 +20,28 @@ class Beers extends Component {
         showModal: false
     };
 
-    showModalHandler() {
-        this.setState({showModal: true});
+    showModalHandler(e) {
+        // COPY THE STATE OBJECT FOR IMMUTABLE OPERATIONS
+        const stateCopy = {...this.state};
+
+        // SET THE SHOW MODAL PROPERTY VALUE TO TRUE TO SHOW MODAL
+        stateCopy.showModal = true;
+
+        // CREATE A NEW STATE PROPERTY THAT FILTERS THE BEERS OBJ ARRAY INTO AN ARRAY WITH THE DATA OF THE BEER THAT WAS CLICKED ON. 
+        stateCopy.singleBeerData = stateCopy.beers.filter(beer => beer.id === e.target.parentElement.dataset.id);
+
+        // SET THE STATE WITH THE NEW STATE
+        this.setState(stateCopy);
     }
 
     hideModalHandler () {
+        // MAKE COPY OF STATE FOR IMMUTABLE OPERATIONS
+
+        //SET SHOW MODAL TO FALSE
+
+        // REMOVE THE SINGLE BEER DATA PROPERTY FROM STATE
+
+        // SET STATE WITH MODIFIED STATE COPY
         this.setState({showModal: false});
     }
 

@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Styles from './Card.module.css';
 
 const card = (props) => (
-    <Card className={Styles.card}>
+    <Card className={Styles.card} data-id={props.searchKey}>
         <Card.Img variant="top" src={props.img} />
         <Card.Body>
             <Card.Title>{props.title}</Card.Title>
