@@ -14,7 +14,7 @@ const footer = props => (
         <Container>
             <Row>
                 <Col>
-                    <h3>Navigation</h3>
+                    <h5>Navigation</h5>
                     <ul>
                         <li>Home</li>
                         <li>Beers</li>
@@ -22,7 +22,7 @@ const footer = props => (
                     </ul>
                 </Col>
                 <Col>
-                    <h3>Social</h3>
+                    <h5>Social</h5>
                     <ul className={styles.socialFooter}>
                         <li><FontAwesomeIcon size="lg" icon={faInstagram} /></li>
                         <li><FontAwesomeIcon size="lg" icon={faLinkedin} /></li>
@@ -30,7 +30,7 @@ const footer = props => (
                     </ul>
                 </Col>
                 <Col>
-                    <h3>API Usage</h3>
+                    <h5>API Usage</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed orci eget urna imperdiet euismod. Quisque lobortis id nisi eget facilisis. Ut iaculis quam vitae magna aliquet rhoncus. Aenean nec convallis ipsum. Aliquam erat volutpat. Suspendisse in interdum leo.</p>
                 </Col>
             </Row>

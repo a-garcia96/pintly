@@ -12,8 +12,8 @@ class contentPagination extends Component {
         this.state = {
             active: 1,
             currentPage: 1,
-            totalPages: Math.ceil(this.props.data.length / 12),
-            splitData: this.props.data.slice(0, 12),
+            totalPages: this.props.data ? Math.ceil(this.props.data.length / 12) : 1,
+            splitData: this.props.data ? this.props.data.slice(0, 12) : null,
             start: 1,
             end: 12
         }

@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './theme.scss';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 //IMPORT BOOSTRAP MIN CSS
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import './theme.scss';
+
 
 ReactDOM.render(
   <React.StrictMode>
