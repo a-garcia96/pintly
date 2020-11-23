@@ -1,9 +1,15 @@
+.nav {
+    min-width: 10%;
+    width: 20%;
+    margin-right: 20%;
+}
+
 .navLink{
-    color: #fff;
+    color: #fff !important;
 }
 
 .navlink:hover,
 .navLink:active {
-    color: #FCD581;
+    color: #FCD581 !important;
     text-decoration: none;
 }

@@ -1,9 +1,10 @@
 footer{
-    height: 500px;
+    min-height: 10vh;
     width: auto;
-    background-color: #FCD581;
+    background-color: #830B2D;
     box-sizing: border-box;
-    padding: 5vh 0;
+    color: #fff;
+    padding: 5%;
 }
 
 footer ul {
