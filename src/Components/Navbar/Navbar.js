@@ -16,8 +16,10 @@ const navbar = (props) => (
     <Navbar collapseOnSelect bg="primary" variant="dark" expand="lg">
         <Container>
             <Navbar.Brand>
-                <img src={Logo} width="30" height="30" className="d-inline-block align-top" alt="React Bootstrap logo" />
-                <strong>PINTLY</strong>
+                <Nav.Link className={styles.navLink} as={Link} to="/">
+                    <img src={Logo} width="30" height="30" className="d-inline-block align-top" alt="React Bootstrap logo" />
+                    <strong>PINTLY</strong>
+                </Nav.Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">

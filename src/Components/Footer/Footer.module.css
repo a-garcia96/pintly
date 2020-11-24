@@ -13,6 +13,15 @@ footer ul {
     padding: 0;
 }
 
+footer ul li a {
+    color: #fff
+}
+
+footer ul li a:hover {
+    color: #fcd581;
+    text-decoration: none;
+}
+
 .socialFooter {
     display: flex;
     justify-content: flex-start;

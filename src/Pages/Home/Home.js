@@ -21,11 +21,6 @@ class Home extends Component {
             pageName: 'HOME',
             description: 'Lorem Ipsum Doler'
         });
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
     }
 
     render() {
@@ -60,8 +55,8 @@ class Home extends Component {
                         </Row>
                     </section>
                 </Container>
-                <div id="beer-section" className={HomepageStyle.diagonalBox}>
-                    <Container className={HomepageStyle.diagonalBoxContent}>
+                <div className={HomepageStyle.diagonalBox}>
+                    <Container id="beer-section" className={HomepageStyle.diagonalBoxContent}>
                         <h2>Beers 101</h2>
                         <Row>
                             <Col sm="auto" lg={6}>

@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
+import { Link } from 'react-router-dom';
+
 import styles from './Footer.module.css'
 
 const date = new Date();
@@ -16,9 +18,9 @@ const footer = props => (
                 <Col sm="auto" lg={4}>
                     <h5>Navigation</h5>
                     <ul>
-                        <li>Home</li>
-                        <li>Beers</li>
-                        <li>Breweries</li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/beers">Beers</Link></li>
+                        <li><Link to="/breweries">Breweries</Link></li>
                     </ul>
                 </Col>
                 <Col sm="auto" lg={4}>
