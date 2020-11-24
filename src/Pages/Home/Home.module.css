@@ -5,24 +5,32 @@
 }
 
 .heroImage{
-    height: 100%;
-    width: 55%;
+    max-height: 100%;
+    max-width: 55%;
     margin-left: 45%;
 }
 
-section {
-    margin-bottom: 10%;
+.homeSections {
+    margin: 25% 0;
 }
 
 .diagonalBox {
     transform: skewY(-11deg);
     -webkit-transform: skewY(-11deg);
-    background-image: linear-gradient(45deg, #6303B1, #ff0099);
-    height: 50vh;
-    margin: 50px 0;
+    background-color: #830B2D;
+    min-height: 80vh;
+    margin: 30% 0;
+    padding: 25% 0;
 }
 
 .diagonalBoxContent {
     transform: skewY(11deg);
     -webkit-transform: skewY(11deg);
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1000px) {
+    .heroImage {
+        margin: 10% 0 0 25%;
+    }
 }
