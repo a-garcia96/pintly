@@ -7,6 +7,16 @@ footer{
     padding: 3% 0 0 0;
 }
 
+p a {
+    color: #fcd581;
+    text-decoration: underline;
+}
+
+p a:hover {
+    color: #fcd581;
+    text-decoration: none;
+}
+
 footer ul {
     list-style-type: none;
     margin: 0;
@@ -34,8 +44,8 @@ footer ul li a:hover {
 
 .footerCopyright {
     margin-top: 2%;
-    min-height: 5vh;
-    max-height: 5vh;
+    min-height: 8vh;
+    max-height: 10vh;
     padding: 0.55% 0;
     background-color: #FCD581;
     color: #000000;
