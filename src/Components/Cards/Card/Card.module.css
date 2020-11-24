@@ -7,3 +7,15 @@
     padding: 10px 20px;
     margin: 20px 10px;
 }
+
+@media screen and (max-width: 770px) {
+    .card {
+        min-width: 80%;
+        margin: 5% auto;
+    }
+
+    .card img {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
