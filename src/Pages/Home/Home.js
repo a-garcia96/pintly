@@ -66,7 +66,7 @@ class Home extends Component {
                                 <Link to="/beers"><Button variant="secondary">Learn Beers</Button></Link>
                             </Col>
                             <Col sm="auto" lg={6}>
-                                <img className="mx-auto d-block" style={{width: "55%"}} src={beerIllustration} alt="Illustration of beers being cheered" />
+                                <img className="mx-auto d-block" style={{width: "55%", overflow: "hidden"}} src={beerIllustration} alt="Illustration of beers being cheered" />
                             </Col>
                         </Row>
                     </Container>
