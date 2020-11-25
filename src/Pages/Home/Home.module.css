@@ -18,15 +18,19 @@
     transform: skewY(-11deg);
     -webkit-transform: skewY(-11deg);
     background-color: #830B2D;
-    min-height: 80vh;
+    max-height: 70vh;
     margin: 30% 0;
-    padding: 25% 0;
+    padding: 15% 0;
 }
 
 .diagonalBoxContent {
     transform: skewY(11deg);
     -webkit-transform: skewY(11deg);
     color: #ffffff;
+}
+
+.beerIllustration {
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 1000px) {

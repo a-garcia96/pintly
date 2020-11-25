@@ -10,6 +10,7 @@ import {Link} from 'react-router-dom'
 
 
 import beerImage from '../../Assets/images/hero_666x1000.jpg'
+import beerIllustration from '../../Assets/images/beer_illustration.png'
 
 import HomepageStyle from './Home.module.css';
 
@@ -57,27 +58,29 @@ class Home extends Component {
                 </Container>
                 <div className={HomepageStyle.diagonalBox}>
                     <Container id="beer-section" className={HomepageStyle.diagonalBoxContent}>
-                        <h2>Beers 101</h2>
                         <Row>
                             <Col sm="auto" lg={6}>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <h2>Beers</h2>
+                                <p>Beer is one of the oldest and most widely consumed alcoholic drinks in the world, and the third most popular drink overall after water and tea. Beer is brewed from cereal grains—most commonly from malted barley, though wheat, maize (corn), and rice are also used.</p>
+                                <p>Beer is distributed in bottles and cans and is also commonly available on draught, particularly in pubs and bars.</p>
+                                <Link to="/beers"><Button variant="secondary">Learn Beers</Button></Link>
                             </Col>
                             <Col sm="auto" lg={6}>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                <Link to="/beers"><Button variant="secondary">Learn Beers</Button></Link>
+                                <img className="mx-auto d-block" style={{width: "55%"}} src={beerIllustration} alt="Illustration of beers being cheered" />
                             </Col>
                         </Row>
                     </Container>
                 </div>
                 <Container>
                     <section className={HomepageStyle.homeSections}>
-                        <h2>Breweries 101</h2>
+                        
                         <Row>
                             <Col sm="auto" lg={6}>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                
                             </Col>
                             <Col sm="auto" lg={6}>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <h2>Breweries</h2>
+                            <p>A brewery or brewing company is a business that makes and sells beer. The place at which beer is commercially made is either called a brewery or a beerhouse, where distinct sets of brewing equipment are called plant.</p>
                                 <Link to="/breweries"><Button variant="primary">Learn Breweries</Button></Link>
                             </Col>
                         </Row>
