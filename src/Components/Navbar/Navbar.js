@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 
 // IMPORT ASSETS
 import Logo from '../../Assets/images/beer-mug.png';
+import AltLogo from '../../Assets/images/beer_illustration.png';
 import { Container } from 'react-bootstrap';
 
 const navbar = (props) => (
@@ -17,7 +18,7 @@ const navbar = (props) => (
         <Container>
             <Navbar.Brand>
                 <Nav.Link className={styles.navLink} as={Link} to="/">
-                    <img src={Logo} width="30" height="30" className="d-inline-block align-top" alt="React Bootstrap logo" />
+                    <img src={AltLogo} width="35" height="40" style={{marginRight: '10px'}} className="d-inline-block align-top" alt="React Bootstrap logo" />
                     <strong>PINTLY</strong>
                 </Nav.Link>
             </Navbar.Brand>
