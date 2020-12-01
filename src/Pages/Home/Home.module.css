@@ -23,8 +23,8 @@
     color: #ffffff;
 }
 
-.beerIllustration {
-    width: 250px;
+.sectionParagraph {
+    padding: 9rem 0;
 }
 
 @media screen and (max-width: 1000px) {
@@ -43,10 +43,6 @@
         text-align: center;
     }
 
-    .beerIllustration {
-        width: 150px;
-    }
-
     .heroImage {
         margin: 10% 0 10% 25%;
     }
@@ -55,11 +51,15 @@
         display:  flex;
         justify-content: center;
     }
+
+    .sectionParagraph {
+        padding: 1.5rem 1rem;
+    }
 }
 
 @media screen and (max-width: 500px) {
     p {
-        font-size: 14px;
+        font-size: 1.4rem;
     }
 
     .diagonalBox {

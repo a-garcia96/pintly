@@ -9,7 +9,6 @@ import Nav from 'react-bootstrap/Nav'
 import { Link } from 'react-router-dom';
 
 // IMPORT ASSETS
-import Logo from '../../Assets/images/beer-mug.png';
 import AltLogo from '../../Assets/images/beer_illustration.png';
 import { Container } from 'react-bootstrap';
 
