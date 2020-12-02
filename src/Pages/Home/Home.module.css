@@ -5,15 +5,15 @@
 }
 
 .homeSections {
-    margin: 25% 0;
+    margin: 15% 0;
 }
 
 .diagonalBox {
     transform: skewY(-11deg);
     -webkit-transform: skewY(-11deg);
     background-color: #830B2D;
-    max-height: 85vh;
-    margin: 30% 0;
+    height: 100%;
+    margin: 15% 0;
     padding: 15% 0;
 }
 
@@ -21,15 +21,42 @@
     transform: skewY(11deg);
     -webkit-transform: skewY(11deg);
     color: #ffffff;
+    margin: 0 auto;
 }
 
-.sectionParagraph {
-    padding: 9rem 0;
+.Illustration {
+    width: 50%;
+}
+
+@media screen and (min-width: 350px) {
+    .diagonalBox {
+        height: 80%;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .diagonalBox {
+        height: 100%;
+    }
+}
+/* 
+@media screen and (max-width: 1750px) {
+    .diagonalBox {
+        height: 85vh;
+    }
 }
 
 @media screen and (max-width: 1000px) {
     .heroImage {
         margin: 10% 0 0 25%;
+    }
+
+    .Illustration {
+        width:75%;
+    }
+
+    .diagonalBox {
+        height: 95vh;
     }
 }
 
@@ -47,6 +74,10 @@
         margin: 10% 0 10% 25%;
     }
 
+    .diagonalBox {
+        height: 110vh;
+    }
+
     .buttonCenterUtil {
         display:  flex;
         justify-content: center;
@@ -54,6 +85,10 @@
 
     .sectionParagraph {
         padding: 1.5rem 1rem;
+    }
+
+    .Illustration {
+        width: 50%;
     }
 }
 
@@ -63,6 +98,6 @@
     }
 
     .diagonalBox {
-        max-height: 100vh;
+        height: 75vh;
     }
-}
+} */
