@@ -1,7 +1,7 @@
 .heroImage{
     max-height: 100%;
-    max-width: 55%;
-    margin-left: 45%;
+    max-width: 80%;
+    margin: 3% 0;
 }
 
 .homeSections {
@@ -37,6 +37,21 @@
 @media screen and (min-width: 400px) {
     .diagonalBox {
         height: 100%;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .heroImage{
+        max-width: 50%;
+    }
+    
+    .Illustration {
+        width: 75%;
+    }
+
+    .centerContent {
+        margin: 0 auto;
+        width: 70vw;
     }
 }
 /* 

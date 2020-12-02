@@ -31,7 +31,7 @@ class Home extends Component {
                 <Jumbotron style={{ minHeight: '50vh', backgroundColor: '#ffffff' }} fluid>
                     <Container>
                         <Row>
-                            <Col xs={{ span: 12, order: 2 }} sm="auto" md={{ span: 6, order: 1 }}>
+                            <Col xs={{ span: 12, order: 2 }} sm="auto" lg={{ span: 6, order: 1 }}>
                                 <div>
                                     <h1 className={HomepageStyle.tagline}>Discover the World of Craft Beers</h1>
                                     <p>The world of craft beers is huge! Many starting to enjoy craft beers often get overwhelemed by the almost endless options. Use Pintly to learn more about the drinks out there including their makers.</p>
@@ -40,8 +40,8 @@ class Home extends Component {
                                     </div>
                                 </div>
                             </Col>
-                            <Col xs={{ span: 12, order: 1 }} sm="auto" md={{ span: 6, order: 2 }}>
-                                <img className={HomepageStyle.heroImage} src={beerImage} alt="hand holding a glass with beer in it." />
+                            <Col xs={{ span: 12, order: 1 }} sm={{ span: 12, order: 1 }} lg={{ span: 6, order: 2 }}>
+                                <img className={`mx-auto d-block ${HomepageStyle.heroImage}`} src={beerImage} alt="hand holding a glass with beer in it." />
                             </Col>
                         </Row>
                     </Container>
@@ -49,7 +49,7 @@ class Home extends Component {
                 <Container>
                     <section className={HomepageStyle.homeSections}>
                         <h2>Craft?!</h2>
-                        <Row>
+                        <Row className={HomepageStyle.centerContent}>
                             <Col sm="auto" lg={6}>
                                 <p>If you've been hiding under a rock then you most likely have never heard the word craft be put behind the word beer before. You must be thinking "Kraft Mac 'n Cheese?". The answer is simply no. Craft isn't mass produced. Think Corona, Bud, Miller Lite, Etc.</p>
                             </Col>
@@ -61,24 +61,24 @@ class Home extends Component {
                 </Container>
                 <div className={HomepageStyle.diagonalBox}>
                     <Container id="beer-section" className={HomepageStyle.diagonalBoxContent}>
-                        <Row>
+                        <Row className={HomepageStyle.centerContent}>
                             <Col className={HomepageStyle.sectionParagraph} xs={{ span: 12, order: 2 }} sm="auto" lg={{ span: 6, order: 1 }}>
                                 <h2>Beers</h2>
                                 <p>Beer is one of the oldest and most widely consumed alcoholic drinks in the world, and the third most popular drink overall after water and tea. Beer is brewed from cereal grains—most commonly from malted barley, though wheat, maize (corn), and rice are also used.</p>
                                 <p>Beer is distributed in bottles and cans and is also commonly available on draught, particularly in pubs and bars.</p>
                                 <Link className={HomepageStyle.buttonCenterUtil} to="/beers"><Button variant="secondary">Learn Beers</Button></Link>
                             </Col>
-                            <Col xs={{ span: 12, order: 1 }} sm="auto" lg={{ span: 6, order: 2 }}>
-                                <img className={`mx-auto d-block ${HomepageStyle.beerIllustration}`} src={beerIllustration} alt="Illustration of a beer barrel" />
+                            <Col xs={{ span: 12, order: 1 }} sm={{ span: 12, order: 1 }} lg={{ span: 6, order: 2 }}>
+                                <img className={`mx-auto d-block ${HomepageStyle.Illustration}`} src={beerIllustration} alt="Illustration of a beer barrel" />
                             </Col>
                         </Row>
                     </Container>
                 </div>
                 <Container>
                     <section className={HomepageStyle.homeSections}>
-                        <Row>
-                            <Col xs={{ span: 12, order: 1 }} sm="auto" lg={{ span: 6, order: 1 }}>
-                                <img className={'mx-auto d-block'} src={pourIllustration} alt="illustration of beer being poured into pint glass" />
+                        <Row className={HomepageStyle.centerContent}>
+                            <Col xs={{ span: 12, order: 1 }} sm={{ span: 12, order: 1 }} lg={{ span: 6, order: 1 }}>
+                                <img className={`mx-auto d-block ${HomepageStyle.Illustration}`} src={pourIllustration} alt="illustration of beer being poured into pint glass" />
                             </Col>
                             <Col className={HomepageStyle.sectionParagraph} xs={{ span: 12, order: 2 }} sm="auto" lg={{ span: 6, order: 1 }}>
                                 <h2>Breweries</h2>
