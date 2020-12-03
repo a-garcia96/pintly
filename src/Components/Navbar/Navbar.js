@@ -9,24 +9,28 @@ import Nav from 'react-bootstrap/Nav'
 import { Link } from 'react-router-dom';
 
 // IMPORT ASSETS
-import AltLogo from '../../Assets/images/beer_illustration.png';
+import Logo from '../../Assets/images/hop.svg';
 import { Container } from 'react-bootstrap';
 
 const navbar = (props) => (
     <Navbar collapseOnSelect bg="primary" variant="dark" expand="lg">
         <Container>
-            <Navbar.Brand>
-                <Nav.Link className={styles.navLink} as={Link} to="/">
-                    <img src={AltLogo} width="35" height="40" style={{marginRight: '10px'}} className="d-inline-block align-top" alt="React Bootstrap logo" />
-                    <strong>PINTLY</strong>
+            <Navbar.Brand href="/Home">
+                <Nav.Link className={`${styles.navLink} ${styles.navLinkLogo} ${styles.navLinkHover}`} as={Link} to="/">
+                    <img src={Logo}
+                    width="60"
+                    height="60"
+                    className="d-inline-block align-top" 
+                    alt="Pinlty Logo" />
+                    Pintly
                 </Nav.Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="ml-auto">
-                    <Nav.Link className={styles.navLink} as={Link} to="/">Home</Nav.Link>
-                    <Nav.Link className={styles.navLink} as={Link} to="/beers">Beers</Nav.Link>
-                    <Nav.Link className={styles.navLink} as={Link} to="/breweries">Breweries</Nav.Link>
+                    <Nav.Link className={`${styles.navLink} ${styles.navLinkHover} ${styles.navLinkText}`} as={Link} to="/">Home</Nav.Link>
+                    <Nav.Link className={`${styles.navLink} ${styles.navLinkHover} ${styles.navLinkText}`} as={Link} to="/beers">Beers</Nav.Link>
+                    <Nav.Link className={`${styles.navLink} ${styles.navLinkHover} ${styles.navLinkText}`} as={Link} to="/breweries">Breweries</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Container>

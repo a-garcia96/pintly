@@ -4,12 +4,20 @@
     margin-right: 20%;
 }
 
-.navLink{
+.navLink {
     color: #fff !important;
 }
 
-.navlink:hover,
-.navLink:active {
+.navLinkText {
+    font-size: 1.6rem;
+}
+
+.navLinkLogo {
+    font-size: 4rem;
+}
+
+.navLinkHover:hover {
     color: #FCD581 !important;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
