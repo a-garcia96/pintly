@@ -5,9 +5,15 @@ footer{
     box-sizing: border-box;
     color: #fff;
     padding: 3% 0 0 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.4rem;
 }
 
 p a {
+    font-size: 1.4rem;
     color: #fcd581;
     text-decoration: underline;
 }
@@ -17,35 +23,59 @@ p a:hover {
     text-decoration: none;
 }
 
-footer ul {
+.footerNavigation {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.footerSocialLinks {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.footerApiDetails {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-footer ul li a {
-    color: #fff
+/* STYLING FOR NAVIGATIONAL LINKS */
+
+li a {
+    color: #fff;
+    font-size: 1.6rem;
 }
 
-footer ul li a:hover {
+
+ul li a:hover {
     color: #fcd581;
     text-decoration: none;
 }
 
+/* STYLING FOR SOCIAL MEDIA LINKS */
+
 .socialFooter {
     display: flex;
-    justify-content: flex-start;
-    align-content: flex-start;
+    justify-content: space-evenly;
 }
 
 .socialFooter li {
-    margin: 0 5% 0 0;
+    /* margin: 0 5% 0 0; */
+}
+
+.socialFooter li a {
+    font-size: ;
 }
 
 .footerCopyright {
     margin-top: 2%;
-    min-height: 8vh;
-    max-height: 10vh;
+    min-height: 4vh;
+    max-height: 8vh;
     padding: 0.55% 0;
     background-color: #FCD581;
     color: #000000;
