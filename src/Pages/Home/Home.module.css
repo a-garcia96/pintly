@@ -28,6 +28,11 @@
     width: 50%;
 }
 
+button a {
+    font-size: 2rem;
+    color: #fff;
+}
+
 @media screen and (min-width: 350px) {
     .diagonalBox {
         height: 80%;

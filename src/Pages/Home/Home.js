@@ -66,7 +66,7 @@ class Home extends Component {
                                 <h2>Beers</h2>
                                 <p>Beer is one of the oldest and most widely consumed alcoholic drinks in the world, and the third most popular drink overall after water and tea. Beer is brewed from cereal grains—most commonly from malted barley, though wheat, maize (corn), and rice are also used.</p>
                                 <p>Beer is distributed in bottles and cans and is also commonly available on draught, particularly in pubs and bars.</p>
-                                <Link className={HomepageStyle.buttonCenterUtil} to="/beers"><Button variant="secondary">Learn Beers</Button></Link>
+                                <Button variant="secondary"><Link className={HomepageStyle.buttonCenterUtil} to="/beers">Learn Beers</Link></Button>
                             </Col>
                             <Col xs={{ span: 12, order: 1 }} sm={{ span: 12, order: 1 }} lg={{ span: 6, order: 2 }}>
                                 <img className={`mx-auto d-block ${HomepageStyle.Illustration}`} src={beerIllustration} alt="Illustration of a beer barrel" />
@@ -83,7 +83,7 @@ class Home extends Component {
                             <Col className={HomepageStyle.sectionParagraph} xs={{ span: 12, order: 2 }} sm="auto" lg={{ span: 6, order: 1 }}>
                                 <h2>Breweries</h2>
                                 <p>A brewery or brewing company is a business that makes and sells beer. The place at which beer is commercially made is either called a brewery or a beerhouse, where distinct sets of brewing equipment are called plant.</p>
-                                <Link className={HomepageStyle.buttonCenterUtil} to="/breweries"><Button variant="primary">Learn Breweries</Button></Link>
+                                <Button variant="primary"><Link className={HomepageStyle.buttonCenterUtil} to="/breweries">Learn Breweries</Link></Button>
                             </Col>
                         </Row>
                     </section>
