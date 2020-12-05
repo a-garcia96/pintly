@@ -64,19 +64,26 @@ ul li a:hover {
     justify-content: space-evenly;
 }
 
-.socialFooter li {
-    /* margin: 0 5% 0 0; */
-}
-
-.socialFooter li a {
-    font-size: ;
-}
-
 .footerCopyright {
     margin-top: 2%;
     min-height: 4vh;
-    max-height: 8vh;
+    max-height: 10vh;
     padding: 0.55% 0;
     background-color: #FCD581;
     color: #000000;
+}
+
+@media screen and (min-width: 1000px) {
+    footer {
+        text-align: initial;
+    }
+
+    .socialFooter {
+        justify-content: flex-start;
+    }
+
+    .socialFooter li  {
+        margin-right: 1.8rem;
+    }
+
 }
