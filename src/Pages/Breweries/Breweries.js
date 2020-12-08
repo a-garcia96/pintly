@@ -16,7 +16,8 @@ class Breweries extends Component {
     state = {
         loading: true,
         showModal: false,
-        singleBreweryData: null
+        singleBreweryData: null,
+        errorMessage: null
     }
 
     showModalHandler(e) {
@@ -54,7 +55,8 @@ class Breweries extends Component {
                 this.setState({ page: response.config.url, breweries: response.data.data, loading: false });
             })
             .catch(error => {
-                this.setState({ errorMessage: error, loading: false });
+                this.setState({errorMessage: error, loading: false });
+                console.log(error);
             });
     }
 
@@ -62,7 +64,13 @@ class Breweries extends Component {
         return (
             <Layout>
                 <Container>
-                    {this.state.loading ? <Loader /> : <Pagination modalHandler={this.showModalHandler.bind(this)} page={this.state.page} data={this.state.breweries} />}
+                    {
+                    this.state.loading ? <Loader />
+                    : this.state.errorMessage !== null ? <div><h1>Uh Oh ... </h1><p>We weren't able to process your request please reload to try again. </p></div>
+                    : <Pagination modalHandler={this.showModalHandler.bind(this)} page={this.state.page} data={this.state.breweries} />
+                    }
+
+
                     {this.state.singleBreweryData === null ? null : <VerticalModal data={this.state.singleBreweryData} show={this.state.showModal} onHide={this.hideModalHandler.bind(this)} />}
                 </Container>
             </Layout>
