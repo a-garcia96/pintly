@@ -43,11 +43,11 @@ class contentPagination extends Component {
 
         return (
             <div className={Styles.contentPagination}>
-                <Pagination>
+                <Pagination style={{fontSize: '1.6rem'}}>
                     {pageItems}
                 </Pagination>
                     <Cards modalHandler={this.props.modalHandler} page={this.props.page} splitData={this.state.splitData}/>
-                <Pagination>
+                <Pagination style={{fontSize: '1.6rem'}}>
                     {pageItems}
                 </Pagination>
             </div>
