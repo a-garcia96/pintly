@@ -27,7 +27,7 @@ const cards = (props) => {
                     img={obj.images === undefined ? missing : obj.images.squareMedium}
                     title={obj.name}
                     subtitle={obj.established}
-                    info={obj.website === undefined ? `Link: N/A` : `Link: ${obj.website}`}
+                    info={obj.website === undefined ? `Website: N/A` : `Website: ${obj.website}`}
                     modalHandler={props.modalHandler}
                     searchKey={obj.id}
                 />
