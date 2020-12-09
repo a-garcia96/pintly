@@ -4,6 +4,7 @@ import Layout from '../../Components/Layout/Layout';
 import Loader from '../../Components/Loader/Loader';
 import Pagination from '../../Components/contentPagination/contentPagination';
 import VerticalModal from '../../Components/Modal/Modal';
+import ErrorPage from '../../Components/ErrorPage/ErrorPage';
 
 
 import axios from '../../Utilities/Axios';
@@ -66,7 +67,7 @@ class Breweries extends Component {
                 <Container>
                     {
                     this.state.loading ? <Loader />
-                    : this.state.errorMessage !== null ? <div><h1>Uh Oh ... </h1><p>We weren't able to process your request please reload to try again. </p></div>
+                    : this.state.errorMessage !== null ? <ErrorPage />
                     : <Pagination modalHandler={this.showModalHandler.bind(this)} page={this.state.page} data={this.state.breweries} />
                     }
 
