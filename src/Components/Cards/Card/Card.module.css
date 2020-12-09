@@ -3,13 +3,12 @@
     background-color: #E9ECEF;
     color: #333;
     box-sizing: border-box;
-    /* padding: 10px 20px; */
     margin: 5% auto;
 }
 
 .card img {
     width: 75%;
-    margin: 0 auto;
+    margin: 10% auto;
 }
 
 .cardMyTitle {
