@@ -1,12 +1,10 @@
 .card {
-    width: 40vh;
-    height: 50vh;
+    width: 85vw;
     background-color: #E9ECEF;
     color: #333;
     box-sizing: border-box;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     margin: 5% auto;
-    font-size: 1.6rem;
 }
 
 .card img {
@@ -14,19 +12,33 @@
     margin: 0 auto;
 }
 
-.card-title {
-    font-size: 2.4rem;
+.cardMyTitle {
+    font-size: 2.8rem;
 }
 
-.card-subtitle {
-    font-size: 1.6rem;
-}
-
-.card-text {
+.cardMySubtitle {
     font-size: 1.4rem;
 }
 
-/* @media screen and (max-width: 770px) {
+.cardMyText {
+    font-size: 1.6rem;
+}
+
+.cardMyButton {
+    font-size: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        width: 40vw;
+    }
+}
+
+
+
+/*
+
+@media screen and (max-width: 770px) {
     .card {
         min-width: 80%;
         margin: 5% auto;
