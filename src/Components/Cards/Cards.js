@@ -1,5 +1,7 @@
 import React from 'react';
 
+import missing from '../../Assets/images/missing.svg';
+
 import Card from './Card/Card';
 
 import Styles from './Cards.module.css'
@@ -10,10 +12,10 @@ const cards = (props) => {
         if (props.page === '/beers/') {
             return (
                 <Card key={obj.id}
-                    img={obj.labels === undefined ? `https://i.pinimg.com/originals/c5/f0/fa/c5f0fa5ac14327b8330fde1c621ffa8a.jpg` : obj.labels.contentAwareMedium}
+                    img={obj.labels === undefined ? missing : obj.labels.contentAwareMedium}
                     title={obj.name}
                     subtitle={obj.style === undefined ? 'N/A' : obj.style.shortName}
-                    info={obj.abv}
+                    info={obj.abv === undefined ? `ABV: N/A` : `ABV: ${obj.abv}`}
                     modalHandler={props.modalHandler}
                     searchKey={obj.id}
                 />
@@ -22,10 +24,10 @@ const cards = (props) => {
             return (
                 <Card
                     key={obj.id} 
-                    img={obj.images === undefined ? 'https://i.pinimg.com/originals/c5/f0/fa/c5f0fa5ac14327b8330fde1c621ffa8a.jpg' : obj.images.squareMedium}
+                    img={obj.images === undefined ? missing : obj.images.squareMedium}
                     title={obj.name}
                     subtitle={obj.established}
-                    info={obj.website}
+                    info={obj.website === undefined ? `Link: N/A` : `Link: ${obj.website}`}
                     modalHandler={props.modalHandler}
                     searchKey={obj.id}
                 />

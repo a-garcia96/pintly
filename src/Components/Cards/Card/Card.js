@@ -11,7 +11,7 @@ const card = (props) => (
         <Card.Body>
             <Card.Title className={Styles.cardMyTitle}>{props.title}</Card.Title>
             <Card.Subtitle className={`mb-2 text-muted ${Styles.cardMySubtitle}`}>{props.subtitle}</Card.Subtitle>
-            <Card.Text className={Styles.cardMyText}><strong>{props.info}%</strong></Card.Text>
+            <Card.Text className={Styles.cardMyText}><strong>{props.info}</strong></Card.Text>
         </Card.Body>
         <Button className={Styles.cardMyButton} onClick={props.modalHandler} variant="secondary">Learn More</Button>
     </Card>
