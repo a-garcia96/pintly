@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 const StateContext = React.createContext();
 
-const context = (props) => (
-    <StateContext.Provider value={props.componentState}>
-        {props.children}
-    </StateContext.Provider>
-);
+class Context extends Component {
 
-export default context;
+    state = {
+        likedBeers: [],
+        likeBreweries: []
+    }
+
+    render() {
+        return (
+            <StateContext.Provider value={this.state}>
+                {this.props.children}
+            </StateContext.Provider>
+        );
+    }
+}
+
+export default Context;

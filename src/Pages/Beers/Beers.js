@@ -5,6 +5,8 @@ import Pagination from '../../Components/contentPagination/contentPagination';
 import VerticalModal from '../../Components/Modal/Modal';
 import ErrorPage from '../../Components/ErrorPage/ErrorPage';
 
+import Context from '../../Components/Context/Context';
+
 
 //IMPORT AXIOS INSTANCE
 import axios from '../../Utilities/Axios';
@@ -19,7 +21,7 @@ class Beers extends Component {
         loading: true,
         items: [],
         showModal: false,
-        singleBeerData: null
+        singleBeerData: null,
     };
 
     showModalHandler(e) {
@@ -47,6 +49,12 @@ class Beers extends Component {
         this.setState(stateCopy);
     }
 
+    likedBeerHandler() {
+        // Add item to liked beers
+
+        // Set Heart icon to background color red
+    }
+
     componentDidMount = () => {
         axios.get('/beers/', {
             params: {
@@ -65,16 +73,18 @@ class Beers extends Component {
 
     render() {
         return (
-            <Layout>
-                <Container>
-                    {this.state.loading ? <Loader />
-                        : this.state.errorMessage !== null ? <ErrorPage />
-                            : <Pagination modalHandler={this.showModalHandler.bind(this)} page={this.state.page} data={this.state.beers} />}
+            <Context.Consumer>
+                <Layout>
+                    <Container>
+                        {this.state.loading ? <Loader />
+                            : this.state.errorMessage !== null ? <ErrorPage />
+                                : <Pagination modalHandler={this.showModalHandler.bind(this)} page={this.state.page} data={this.state.beers} />}
 
-                    {this.state.singleBeerData === null ? null : <VerticalModal data={this.state.singleBeerData} show={this.state.showModal} onHide={this.hideModalHandler.bind(this)} />}
+                        {this.state.singleBeerData === null ? null : <VerticalModal data={this.state.singleBeerData} show={this.state.showModal} onHide={this.hideModalHandler.bind(this)} />}
 
-                </Container>
-            </Layout>
+                    </Container>
+                </Layout>
+            </Context.Consumer>
         )
     }
 }
