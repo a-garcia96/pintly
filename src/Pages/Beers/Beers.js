@@ -24,7 +24,7 @@ class Beers extends Component {
 
     showModalHandler(e) {
         // COPY THE STATE OBJECT FOR IMMUTABLE OPERATIONS
-        const stateCopy = {...this.state};
+        const stateCopy = { ...this.state };
 
         // SET THE SHOW MODAL PROPERTY VALUE TO TRUE TO SHOW MODAL
         stateCopy.showModal = true;
@@ -36,9 +36,9 @@ class Beers extends Component {
         this.setState(stateCopy);
     }
 
-    hideModalHandler () {
+    hideModalHandler() {
         // MAKE COPY OF STATE FOR IMMUTABLE OPERATIONS
-        const stateCopy = {...this.state};
+        const stateCopy = { ...this.state };
         //SET SHOW MODAL TO FALSE
         stateCopy.showModal = false;
         // REMOVE THE SINGLE BEER DATA PROPERTY FROM STATE
@@ -57,8 +57,8 @@ class Beers extends Component {
                 this.setState({ page: response.config.url, beers: response.data.data, loading: false });
             })
             .catch(error => {
-                this.setState({errorMessage: error, loading: false });
-                });
+                this.setState({ errorMessage: error, loading: false });
+            });
     }
 
 
@@ -67,12 +67,12 @@ class Beers extends Component {
         return (
             <Layout>
                 <Container>
-                    {this.state.loading ? <Loader /> 
-                    : this.state.errorMessage !== null ? <ErrorPage />
-                    : <Pagination modalHandler={this.showModalHandler.bind(this)} page={this.state.page} data={this.state.beers} />}
+                    {this.state.loading ? <Loader />
+                        : this.state.errorMessage !== null ? <ErrorPage />
+                            : <Pagination modalHandler={this.showModalHandler.bind(this)} page={this.state.page} data={this.state.beers} />}
 
-                    {this.state.singleBeerData === null ? null : <VerticalModal data={this.state.singleBeerData} show={this.state.showModal} onHide={this.hideModalHandler.bind(this)}/>}
-                    
+                    {this.state.singleBeerData === null ? null : <VerticalModal data={this.state.singleBeerData} show={this.state.showModal} onHide={this.hideModalHandler.bind(this)} />}
+
                 </Container>
             </Layout>
         )
