@@ -7,6 +7,7 @@ import ScrollToTop from './Components/scrollToTop/scrollToTop';
 import Home from './Pages/Home/Home';
 import Beers from './Pages/Beers/Beers';
 import Breweries from './Pages/Breweries/Breweries';
+import Likes from './Pages/Likes/Likes';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/beers" component={Beers} />
         <Route path="/breweries" component={Breweries} />
+        <Route path="/likes" component={Likes} />
       </Router>
     </DocumentMeta>
   );
