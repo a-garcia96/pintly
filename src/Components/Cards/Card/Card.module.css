@@ -27,6 +27,10 @@
     font-size: 1.6rem;
 }
 
+.cardLikeButton {
+    padding: 1.6rem;
+}
+
 @media screen and (min-width: 768px) {
     .card {
         width: 40vw;
