@@ -2,6 +2,7 @@ import React from 'react';
 import DocumentMeta from 'react-document-meta';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import ScrollToTop from './Components/scrollToTop/scrollToTop';
+import { LikesProvider } from './Components/Context/Context';
 
 //IMPORT PAGES FOR ROUTE
 import Home from './Pages/Home/Home';
@@ -27,11 +28,13 @@ function App() {
   return (
     <DocumentMeta {...meta}>
       <Router>
-        <ScrollToTop />
-        <Route path="/" exact component={Home} />
-        <Route path="/beers" component={Beers} />
-        <Route path="/breweries" component={Breweries} />
-        <Route path="/likes" component={Likes} />
+        <LikesProvider>
+          <ScrollToTop />
+          <Route path="/" exact component={Home} />
+          <Route path="/beers" component={Beers} />
+          <Route path="/breweries" component={Breweries} />
+          <Route path="/likes" component={Likes} />
+        </LikesProvider>
       </Router>
     </DocumentMeta>
   );

@@ -1,18 +1,24 @@
 import React from 'react';
+import Pagination from '../../Components/contentPagination/contentPagination';
+
+
 import { Container } from 'react-bootstrap';
 
-import Context from '.././../Components/Context/Context';
+import { LikesContext } from '../../Components/Context/Context';
 
 import Layout from '../../Components/Layout/Layout';
 
 const likes = props => (
-    <Context.Consumer>
-        <Layout>
-            <Container>
-                <h1>Your saved beers and breweries!</h1>
-            </Container>
-        </Layout>
-    </Context.Consumer>
-);
+    <LikesContext.Consumer>
+        {(context) => (
+            <Layout>
+                <Container>
+                    <h1>{context.state.text}</h1>
+                    <Pagination data={context.state.likes} />
+                </Container>
+            </Layout>
+        )}
+    </LikesContext.Consumer>
+)
 
 export default likes;
