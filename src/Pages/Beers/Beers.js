@@ -11,13 +11,14 @@ import axios from '../../Utilities/Axios';
 
 
 import Container from 'react-bootstrap/esm/Container';
+import Likes from '../Likes/Likes';
+
 
 class Beers extends Component {
     state = {
         errorMessage: null,
         beers: null,
         loading: true,
-        items: [],
         showModal: false,
         singleBeerData: null,
     };
@@ -60,8 +61,6 @@ class Beers extends Component {
                 this.setState({ errorMessage: error, loading: false });
             });
     }
-
-
 
     render() {
         return (

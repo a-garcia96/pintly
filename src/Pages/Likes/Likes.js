@@ -8,17 +8,21 @@ import { LikesContext } from '../../Components/Context/Context';
 
 import Layout from '../../Components/Layout/Layout';
 
-const likes = props => (
-    <LikesContext.Consumer>
-        {(context) => (
-            <Layout>
-                <Container>
-                    <h1>{context.state.text}</h1>
-                    <Pagination data={context.state.likes} />
-                </Container>
-            </Layout>
-        )}
-    </LikesContext.Consumer>
-)
+const Likes = props => {
 
-export default likes;
+    
+    return (
+        <LikesContext.Consumer>
+            {(context) => (
+                <Layout>
+                    <Container>
+                        <h1>{context.state.text}</h1>
+                        <Pagination data={context.state.likes} />
+                    </Container>
+                </Layout>
+            )}
+        </LikesContext.Consumer>
+    )
+}
+
+export default Likes;

@@ -28,8 +28,8 @@ function App() {
   return (
     <DocumentMeta {...meta}>
       <Router>
+        <ScrollToTop />
         <LikesProvider>
-          <ScrollToTop />
           <Route path="/" exact component={Home} />
           <Route path="/beers" component={Beers} />
           <Route path="/breweries" component={Breweries} />
