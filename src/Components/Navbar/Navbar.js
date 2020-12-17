@@ -11,13 +11,13 @@ import { Link } from 'react-router-dom';
 // IMPORT ASSETS
 import Logo from '../../Assets/images/hop.svg';
 import { Container } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons/faHeart';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faHeart } from '@fortawesome/free-solid-svg-icons/faHeart';
 
 const navbar = (props) => (
     <Navbar collapseOnSelect bg="primary" variant="dark" expand="lg">
         <Container>
-            <Navbar.Brand href="/Home">
+            <Navbar.Brand componentclass='span'>
                 <Nav.Link className={`${styles.navLink} ${styles.navLinkLogo} ${styles.navLinkHover}`} as={Link} to="/">
                     <img src={Logo}
                     width="60"
@@ -33,7 +33,7 @@ const navbar = (props) => (
                     <Nav.Link className={`${styles.navLink} ${styles.navLinkHover} ${styles.navLinkText}`} as={Link} to="/">Home</Nav.Link>
                     <Nav.Link className={`${styles.navLink} ${styles.navLinkHover} ${styles.navLinkText}`} as={Link} to="/beers">Beers</Nav.Link>
                     <Nav.Link className={`${styles.navLink} ${styles.navLinkHover} ${styles.navLinkText}`} as={Link} to="/breweries">Breweries</Nav.Link>
-                    <Nav.Link className={`${styles.navLink} ${styles.navLinkHover} ${styles.navLinkText}`} as={Link} to="/likes"><FontAwesomeIcon size="2x" icon={faHeart} /></Nav.Link>
+                    <Nav.Link className={`${styles.navLink} ${styles.navLinkHover} ${styles.navLinkText}`} as={Link} to="/likes">Likes</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Container>
