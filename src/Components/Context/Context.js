@@ -8,7 +8,8 @@ export class LikesProvider extends Component {
 
     state = {
         ids: [],
-        likes: []
+        likes: [],
+        page: '/likes/'
     }
 
     render()  {
@@ -19,6 +20,9 @@ export class LikesProvider extends Component {
                 likeItem: (e) => {
                     let stateCopy = { ...this.state };
                     let itemID = e.target.closest(".card").dataset.id;
+                    let likeButton = e.target.closest("svg");
+
+                    console.log(likeButton);
                     
                     axios.get(`/beer/${itemID}`, {
                         params: {
@@ -32,11 +36,13 @@ export class LikesProvider extends Component {
                             stateCopy.ids.push(itemID);
                             stateCopy.likes.push(fetchedData);
                             console.log("Liked!")
+                            likeButton.style.color = 'red'
                         } else {
                             let itemIndex = stateCopy.ids.indexOf(itemID);
                             stateCopy.ids.splice(itemIndex, 1);
                             stateCopy.likes.splice(itemIndex, 1);
                             console.log("Unliked!")
+                            likeButton.style.color = 'black'
                         }
                     })
                     .catch(error => {
