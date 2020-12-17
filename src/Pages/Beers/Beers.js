@@ -11,7 +11,6 @@ import axios from '../../Utilities/Axios';
 
 
 import Container from 'react-bootstrap/esm/Container';
-import Likes from '../Likes/Likes';
 
 
 class Beers extends Component {
